@@ -1,0 +1,21 @@
+
+
+.container{
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+
+.header-wrapper{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 15px;
+    background-color: #f4f4f4; 
+}
+
+.nav-left{
+
+  
+    align-items: center; 
+
+}
