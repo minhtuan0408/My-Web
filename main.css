@@ -1,21 +1,48 @@
 
 
+body{
+    margin: 0 0;
+}
+
 .container{
-    max-width: 1400px;
-    margin: 0 auto;
+   
+    margin: 0;
+     
 }
 
 
 .header-wrapper{
     display: flex;
     justify-content: space-between;
-    padding: 0 15px;
-    background-color: #f4f4f4; 
+    background-color: #111; 
 }
 
 .nav-left{
+    display: flex;
+    align-items: center;
+    
+}
 
-  
-    align-items: center; 
 
+
+.nav-left > a{
+    font-style: italic;
+    color: rgb(0, 140, 255);
+
+    margin: 0px 25px;
+
+}
+
+.hot-new{ 
+    display: flex;
+}
+
+.hinhnen{
+    width: 100%;
+    height: auto;
+}
+
+.BG-container{
+    width: 100%;
+    background-image:"C:\xampp\htdocs\MyWeb\Asset\hinhnen.png";
 }
