@@ -1,13 +1,17 @@
-
+.BG{
+    width: 100%;
+    height: 200vh;
+    background-image: linear-gradient( 0,#333, #a0a0a0) ;
+}
 
 body{
     margin: 0 0;
 }
 
 .container{
-   
-    margin: 0;
+    margin: 0 auto;
      
+    /* max-width: 1200px; */
 }
 
 
@@ -20,7 +24,6 @@ body{
 .nav-left{
     display: flex;
     align-items: center;
-    
 }
 
 
@@ -28,9 +31,7 @@ body{
 .nav-left > a{
     font-style: italic;
     color: rgb(0, 140, 255);
-
     margin: 0px 25px;
-
 }
 
 .hot-new{ 
@@ -39,10 +40,36 @@ body{
 
 .hinhnen{
     width: 100%;
+   
     height: auto;
 }
 
-.BG-container{
+.BG-intro{
     width: 100%;
-    background-image:"C:\xampp\htdocs\MyWeb\Asset\hinhnen.png";
+    height: 100vh;
+    
+    background-image: url('../Asset/hinhnen.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+
+}
+.hot-new > h1{
+    display: flex;
+    justify-content: center; /* Căn ngang */
+    height: 100vh; /* Nếu muốn căn giữa cả trang */
+}
+
+.grid-intro{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.grid-intro> div {
+    font-size: 30px;
+    text-align: center;
+    margin: 20px;
+    padding: 50px;
+    width: 150px;
+    flex-grow: 1;
 }
