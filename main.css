@@ -1,6 +1,6 @@
 .BG{
     width: 100%;
-    height: 200vh;
+    height: 1200vh;
     background-image: linear-gradient( 0,#333, #a0a0a0) ;
 }
 
@@ -10,8 +10,6 @@ body{
 
 .container{
     margin: 0 auto;
-     
-    /* max-width: 1200px; */
 }
 
 
@@ -26,8 +24,6 @@ body{
     align-items: center;
 }
 
-
-
 .nav-left > a{
     font-style: italic;
     color: rgb(0, 140, 255);
@@ -36,6 +32,7 @@ body{
 
 .hot-new{ 
     display: flex;
+    justify-content: center;
 }
 
 .hinhnen{
@@ -45,31 +42,31 @@ body{
 }
 
 .BG-intro{
-    width: 100%;
-    height: 100vh;
-    
+    width: 100%;     /* chiều rộng */
+    height: 1200vh; /* chiiều cao */
     background-image: url('../Asset/hinhnen.png');
-    background-size: contain;
-    background-repeat: no-repeat;
 
+    background-repeat: no-repeat;
 }
+
 .hot-new > h1{
     display: flex;
-    justify-content: center; /* Căn ngang */
-    height: 100vh; /* Nếu muốn căn giữa cả trang */
 }
 
 .grid-intro{
     display: flex;
-    flex-wrap: wrap;
-    padding: 20px;
+    flex-wrap: wrap; 
+    justify-content: space-evenly; 
+    /* space-between: Khoảng cách giữa các phần tử đều nhau, nhưng hai đầu sẽ không có khoảng trống.
+       space-around: Khoảng cách giữa các phần tử đều nhau, nhưng khoảng trống ở hai đầu sẽ nhỏ hơn.
+        space-evenly: Khoảng cách giữa tất cả các phần tử và hai đầu đều nhau. */
+}
+.grid-intro> div {
+    margin: 20px 20px;
+    width: 150px;
 }
 
-.grid-intro> div {
-    font-size: 30px;
-    text-align: center;
-    margin: 20px;
-    padding: 50px;
-    width: 150px;
-    flex-grow: 1;
+.title-shop-introduce-container1{
+    display: flex;
+    
 }
