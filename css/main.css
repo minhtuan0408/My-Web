@@ -80,7 +80,7 @@ body{
 
 
 .item-main-show-container > div {
-    background-color: lightgreen;
+    background-color: rgb(73, 73, 73);
     font-size: 30px;
     text-align: center;
     margin: 20px;
@@ -98,6 +98,6 @@ body{
 }
 
 .title-item{
-    margin: 0 ;
+    margin: 0 !important;
     padding: 0;
 }

@@ -14,10 +14,10 @@
         $user = $result->fetch_assoc();
         $_SESSION['Username'] = $user['username'];
 
-        echo "<a href='../main.php'>Đi đến trang chủ</a>";
-        header("Location: main.php");
+
+        header("Location: Admin/FindAsset.php");
         exit();
     } else {
-        echo "Đăng nhập thất bại. Vui lòng kiểm tra lại tên đăng nhập và mật khẩu.";
+        echo "Đăng nhập thất bại";
     }
 ?>

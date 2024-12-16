@@ -1,0 +1,199 @@
+* {
+    box-sizing: border-box;
+}
+.BG{
+    width: 100%;
+    height: 120vh;
+    background-image: linear-gradient( 0,#333, #a0a0a0) ;
+}
+
+body{
+    margin: 0 0;
+}
+
+.container{
+    margin: 0 auto;
+}
+
+.header-wrapper{
+    display: flex;
+    justify-content: space-between;
+    background-color: #141212; 
+    height: 60px;
+    width: 100%;
+    position: fixed;
+    z-index: 9;
+    box-shadow: 0 4px 50px rgba(0, 0, 0, 0.7);
+}
+
+.nav-left{
+    display: flex;
+    align-items: center;
+}
+
+.nav-left a{
+    font-style: italic;
+    font-weight: bold;
+    color: rgb(0, 140, 255);
+    margin: 0px 25px;
+    /* hehe */
+    text-decoration: none;
+    display: flex; justify-content: center; align-items: center;
+    height: 100%;
+}
+
+.nav-left > div {
+    height: 100%;
+    cursor: pointer;
+}
+
+.nav-left > div:hover {
+    background-color:#333333;
+    transition: 200ms;
+}
+
+.hot-new{ 
+    display: flex;
+    justify-content: center;
+}
+
+.hot-new:hover {
+    color: whitesmoke;
+    transition: 500ms;
+    text-shadow: 1px 1px 1px black;
+}
+
+.hinhnen{
+    width: 100%;
+   
+    height: auto;
+}
+
+.BG-intro{
+    width: 100%;     /* chiều rộng */
+    height: 1200vh; /* chiiều cao */
+    background-image: url('../Asset/hinhnen.png');
+
+    background-repeat: no-repeat;
+}
+
+.hot-new > h1{
+    display: flex;
+}
+
+.grid-intro{
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-evenly; 
+    /* space-between: Khoảng cách giữa các phần tử đều nhau, nhưng hai đầu sẽ không có khoảng trống.
+       space-around: Khoảng cách giữa các phần tử đều nhau, nhưng khoảng trống ở hai đầu sẽ nhỏ hơn.
+        space-evenly: Khoảng cách giữa tất cả các phần tử và hai đầu đều nhau. */
+}
+
+.grid-intro img {
+    border-radius: 5px;
+}
+
+.grid-intro > div {
+    margin: 20px 20px;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 5px 7px rgba(0, 0, 0, 0.4);
+    border-radius: 20px;
+}
+
+.grid-intro > div:hover {
+    box-shadow: 0 5px 7px rgba(0, 0, 0, 0.4);
+    transform: translateY(-5px);
+    transition: 250ms;
+}
+
+.grid-intro > div:not(:hover) {
+    transform: translateY(5px);
+    transition: 250ms;
+}
+
+.grid-intro a {
+    color: white;
+    text-decoration: none;
+}
+
+.title-shop-introduce-container1{
+    display: flex;
+    
+}
+
+.item-main-show-container{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+
+.item-main-show-container > div {
+    background-color: lightgreen;
+    font-size: 30px;
+    text-align: center;
+    margin: 20px;
+    padding: 50px;
+    width: 150px;
+    flex-grow: 1;
+}
+
+.fixed-size {
+    max-width: 200px;
+    max-height: 200px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
+
+.title-item{
+    margin: 0 ;
+    padding: 0;
+}
+
+.navbar-center {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-center > input {
+    border-radius: 10px;
+    padding: 4px 20px;
+    margin: 3px;
+    width: 200px;
+    height: 40px;
+    color: white;
+    background-color: blanchedalmond;
+    border: none;
+    border: 1px solid lightgray
+}
+
+.navbar-center > button {
+    border-radius: 30px;
+}
+
+main {
+    padding-top: 60px;
+}
+
+.item-main-show-container > div {
+    border-radius: 10px;
+    display: block;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+.item-main-show-container > div:hover {
+    box-shadow: 0 5px 7px rgba(0, 0, 0, 0.4);
+    transform: translateY(-5px);
+    transition: 250ms;
+    cursor: pointer;
+}
+.item-main-show-container > div:active {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transform: translateY(1px);
+}

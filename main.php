@@ -74,9 +74,14 @@
                         echo "<div class='item-main-show-container'>";
                     }
                     echo "<div>
-                            <h3 class='title-item'>Free Art 1</h3>
-                            <img src='Asset/art-free1.png' class='fixed-size'><br>
-                            <button >Order</button>
+                            <h3 class='title-item'>{$row['name']}</h3>
+                            <img src='{$row['link']}' class='fixed-size'><br>
+                            <form method='post' action='orderBack-end.php'>
+                                <input type='hidden' name='product_id' value='{$row['product_id']}'>
+                                <input type='hidden' name='user_id' value='{$_SESSION['Username']}'>
+                                
+                                <button type='submit'>Order</button>
+                            </form>
                         </div>
                         ";
                     $cnt++;
@@ -91,7 +96,6 @@
     </main>
 
     
-
 
     <footer>
 

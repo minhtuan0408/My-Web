@@ -5,6 +5,8 @@
     <title>Tìm kiếm vật phẩm</title>
 </head>
 <body>
+    <a href="../main.php">Trang Chủ</a>
+    <a href="AddAsset.php">Thêm vật phẩm</a><br>
     <h2>Tìm kiếm vật phẩm</h2>
     <form method="GET" action="">
         <label for="name">Tên Vật Phẩm:</label>

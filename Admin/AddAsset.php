@@ -5,6 +5,7 @@
     <title>Thêm Sản Phẩm</title>
 </head>
     <body>
+        <a href="FindAsset.php">Tìm kiếm các vật phẩm</a>
         <h2>Thêm vật phẩm</h2>
         <form action="AddAssetBack-end.php" method="post">
 
@@ -25,8 +26,12 @@
                 <option value="Sound">Sound</option>
                 <option value="Other">Other</option>
             </select><br>
+
+            <label for="link">Gửi link ảnh</label>
+            <input type="text" id="name" name="link"><br>
+
             <button type="submit">Thêm Vật Phẩm</button><br>
-            <a href="FindAsset.php">Tìm kiếm các vật phẩm</a>
+            
         </form>
         
     </body>

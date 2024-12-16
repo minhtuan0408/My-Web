@@ -7,7 +7,7 @@
 </head>
     <body>
         <h1>Đăng Nhập Admin</h1>
-        <form method="POST" action="loginBack-end.php">
+        <form method="POST" action="loginAdminBack-end.php">
             <label for="username">Tên đăng nhập:</label>
             <input type="text" name="username" id="username" required><br><br>
             <label for="password">Mật khẩu:</label>
