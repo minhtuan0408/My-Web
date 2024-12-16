@@ -70,3 +70,34 @@ body{
     display: flex;
     
 }
+
+.item-main-show-container{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+
+.item-main-show-container > div {
+    background-color: lightgreen;
+    font-size: 30px;
+    text-align: center;
+    margin: 20px;
+    padding: 50px;
+    width: 150px;
+    flex-grow: 1;
+}
+
+.fixed-size {
+    max-width: 200px;
+    max-height: 200px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
+
+.title-item{
+    margin: 0 ;
+    padding: 0;
+}

@@ -15,7 +15,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Navigation Bar</title>
-    <link rel="stylesheet" href="main.css">  
+    <link rel="stylesheet" href="css/main.css">  
 </head>
 <body>
     <header> 
@@ -28,9 +28,15 @@
                     <a href="">My product</a>
                     <a href="MyGit">Git hub</a>
                 </div>  
+                
                 <div class="navbar-center">
-                    <input type="text" placeholder="Search">
-                    <button class="search-btn">🔍</button>
+                    <!-- <input type="text" placeholder="Search">
+                    <button class="search-btn">🔍</button> -->
+
+                    <form method="GET" action="">
+                        <input type="text" id="name" name="name" placeholder="Search">
+                        <button type="submit">🔍</button>
+                    </form>
                 </div>
                 <div class="nav-right">
                     <img src="profile.png" alt="Profile" class="profile">
@@ -40,12 +46,7 @@
         </div>  
     </header>
 
-    <h2>Tìm kiếm vật phẩm</h2>
-    <form method="GET" action="">
-        <label for="name">Tên Vật Phẩm:</label>
-        <input type="text" id="name" name="name"><br><br>
-        <button type="submit">Tìm kiếm</button>
-    </form>
+
 
     <main>
         <?php
@@ -58,39 +59,35 @@
             } else {
                 $sql = "SELECT * FROM products";
             }
-
             $result = $conn->query($sql);
 
-            if ($result->num_rows > 0) 
+
+            if ( $result->num_rows > 0) 
             { 
-                echo"<table border='1' width=50% align='center'>
-                    <caption> <b> Các vật phẩm đang treo</caption>
-                <tr>
-                    <th>ID</th>
-                    <th>Tên vật phẩm</th>
-                    <th>Mô tả</th>
-                    <th>Giá</th>
-                </tr>";
-                
+                $cnt = 0;
                 while($row = $result->fetch_assoc())
                 { 
-                    if ($row["product_id"]%2==0)
-                    {
-                    echo "<tr class='odd'><td>".$row["product_id"]. "</td>";
+                    if ($cnt % 4 == 0){
+                        if ($cnt >0){
+                            echo "</div>";
+                        }
+                        echo "<div class='item-main-show-container'>";
                     }
-                    else
-                    {
-                        echo "<tr class='even'><td>" .$row["product_id"]. "</td>";
-                    }
-                    echo "<td>" .$row["name"]. "</td>"
-                        ."<td>" .$row["description"]. "</td>"
-                        ."<td>" .$row["price"]."</td>";
-                    }
+                    echo "<div>
+                            <h3 class='title-item'>Free Art 1</h3>
+                            <img src='Asset/art-free1.png' class='fixed-size'><br>
+                            <button >Order</button>
+                        </div>
+                        ";
+                    $cnt++;
                 }
+            }
             else {
-                echo "None";
+                echo "Không tìm thấy thông tin Asset";
             }
         ?>
+
+
     </main>
 
     
