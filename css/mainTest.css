@@ -1,0 +1,107 @@
+.BG {
+    width: 100%;
+    height: auto;
+    background-image: url('../Asset/hinhnen.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+body{
+    margin: 0 0;
+}
+
+.container{
+    margin: 0 auto;
+}
+
+
+.header-wrapper{
+    display: flex;
+    justify-content: space-between;
+    background-color: #111; 
+}
+
+.nav-left{
+    display: flex;
+    align-items: center;
+}
+
+.nav-left > a{
+    font-style: italic;
+    color: rgb(0, 140, 255);
+    margin: 0px 25px;
+}
+
+.hot-new{ 
+    display: flex;
+    justify-content: center;
+}
+
+.hinhnen{
+    width: 100%;
+   
+    height: auto;
+}
+
+.BG-intro{
+    width: 100%;     /* chiều rộng */
+    height: 1200vh; /* chiiều cao */
+    background-image: url('../Asset/hinhnen.png');
+
+    background-repeat: no-repeat;
+}
+
+.hot-new > h1{
+    display: flex;
+}
+
+.grid-intro{
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-evenly; 
+    /* space-between: Khoảng cách giữa các phần tử đều nhau, nhưng hai đầu sẽ không có khoảng trống.
+       space-around: Khoảng cách giữa các phần tử đều nhau, nhưng khoảng trống ở hai đầu sẽ nhỏ hơn.
+        space-evenly: Khoảng cách giữa tất cả các phần tử và hai đầu đều nhau. */
+}
+.grid-intro> div {
+    margin: 20px 20px;
+    width: 150px;
+}
+
+.title-shop-introduce-container1{
+    display: flex;
+    
+}
+
+.item-main-show-container{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+
+.item-main-show-container > div {
+    background-color: rgb(73, 73, 73);
+    font-size: 30px;
+    text-align: center;
+    margin: 20px;
+    padding: 50px;
+    width: 150px;
+    flex-grow: 1;
+}
+
+.fixed-size {
+    max-width: 200px;
+    max-height: 200px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
+
+.title-item{
+    margin: 0 !important;
+    padding: 0;
+}

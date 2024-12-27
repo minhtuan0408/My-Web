@@ -1,5 +1,5 @@
 <?php
-include '../connect.php';
+include '../../connect.php';
 
 
 $product_id = isset($_GET['id']) ? intval($_GET['id']) : 0;
@@ -17,6 +17,6 @@ if ($product_id > 0) {
 }
 
 
-header("Location: findAsset.php");
+header("Location: ../../Admin/Admin.php");
 exit();
 ?>

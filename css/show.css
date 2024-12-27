@@ -1,0 +1,74 @@
+/* Container sản phẩm */
+.item-main-show-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+.product-item {
+    position: relative; /* Cần thêm relative để nút Order có thể được cố định */
+    width: 200px;
+    margin: 10px;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    transition: transform 0.3s ease-in-out;
+}
+
+.product-item:hover {
+    transform: scale(1.05); /* Tăng kích thước khi hover */
+}
+
+.product-item img {
+    width: 100%;
+    height: auto;
+}
+
+/* Mô tả sản phẩm */
+.product-description {
+    font-size: 14px;
+    color: #555;
+    margin-top: 10px;
+    height: 50px; /* Giới hạn độ cao của mô tả */
+    overflow: hidden; /* Ẩn phần mô tả dài */
+    text-overflow: ellipsis;
+}
+
+/* Giá sản phẩm */
+.product-price {
+    font-size: 16px;
+    font-weight: bold;
+    color: #e74c3c;
+    margin-top: 10px;
+}
+
+/* Nút Order cố định dưới cùng */
+.product-item form {
+    position: absolute;
+    bottom: 10px; /* Cố định nút Order ở dưới cùng */
+    width: 80%; /* Đảm bảo nút Order chiếm hết chiều rộng của phần tử sản phẩm */
+
+    padding: 0; /* Xóa padding nếu có */
+    margin: 0; /* Xóa margin nếu có */
+}
+
+.product-item button {
+    width: 100%; /* Đảm bảo nút "Order" rộng hết chiều rộng của sản phẩm */
+    padding: 10px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    
+}
+
+.product-item button:hover {
+    background-color: #2980b9; /* Thay đổi màu nút khi hover */
+}

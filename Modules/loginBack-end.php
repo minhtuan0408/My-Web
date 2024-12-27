@@ -1,5 +1,5 @@
 <?php   
-    require 'connect.php';
+    require '../connect.php';
     session_start(); 
 
     $username = $_POST['username'];
@@ -13,10 +13,19 @@
 
         $user = $result->fetch_assoc();
         $_SESSION['Username'] = $user['username'];
+        $_SESSION['role'] = $user['role'];
+        if ($user['role'] == 'user')
+        {
+            header("Location: ../main.php");
+            exit();
+        }elseif($user['role'] == 'admin'){
+            header("Location: ../Admin/Admin.php");
+            exit();
+        }
+        else{
+            echo "Tài khoản bạn bị lỗi, vui lòng đăng kí tài khoản mới";
+        }
 
-        echo "<a href='../main.php'>Đi đến trang chủ</a>";
-        header("Location: main.php");
-        exit();
     } else {
         echo "Đăng nhập thất bại. Vui lòng kiểm tra lại tên đăng nhập và mật khẩu.";
     }

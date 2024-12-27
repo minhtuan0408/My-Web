@@ -1,5 +1,5 @@
 <?php
-    require "../connect.php";
+    require "../../connect.php";
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $name = $_POST["ten"];
         $description = $_POST["mota"];
@@ -11,7 +11,7 @@
 
         if ($conn->query($sql) === TRUE) {
             echo"đã thêm vật phẩm <br>";
-            echo "<a href='AddAsset.php'> Quay lại </a>";
+            echo "<a href='../../Admin/AdminAdd.php'> Quay lại </a>";
         } else {
             echo "Lỗi: " . $sql . "<br>" . $conn->error;
         }

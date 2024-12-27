@@ -1,8 +1,16 @@
-.BG{
-    width: 100%;
-    height: 1200vh;
-    background-image: linear-gradient( 0,#333, #a0a0a0) ;
+* {
+    box-sizing: border-box;
 }
+
+.BG {
+    width: 100%;
+    height: auto;
+    background-image: url('../Asset/hinhnen.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 
 body{
     margin: 0 0;
@@ -12,11 +20,15 @@ body{
     margin: 0 auto;
 }
 
-
 .header-wrapper{
     display: flex;
     justify-content: space-between;
-    background-color: #111; 
+    background-color: #141212; 
+    height: 60px;
+    width: 100%;
+    position: fixed;
+    z-index: 9;
+    box-shadow: 0 4px 50px rgba(0, 0, 0, 0.7);
 }
 
 .nav-left{
@@ -24,15 +36,36 @@ body{
     align-items: center;
 }
 
-.nav-left > a{
+.nav-left a{
     font-style: italic;
+    font-weight: bold;
     color: rgb(0, 140, 255);
     margin: 0px 25px;
+    /* hehe */
+    text-decoration: none;
+    display: flex; justify-content: center; align-items: center;
+    height: 100%;
+}
+
+.nav-left > div {
+    height: 100%;
+    cursor: pointer;
+}
+
+.nav-left > div:hover {
+    background-color:#333333;
+    transition: 200ms;
 }
 
 .hot-new{ 
     display: flex;
     justify-content: center;
+}
+
+.hot-new:hover {
+    color: rgb(0, 200, 255);
+    transition: 500ms;
+    
 }
 
 .hinhnen{
@@ -61,9 +94,36 @@ body{
        space-around: Khoảng cách giữa các phần tử đều nhau, nhưng khoảng trống ở hai đầu sẽ nhỏ hơn.
         space-evenly: Khoảng cách giữa tất cả các phần tử và hai đầu đều nhau. */
 }
-.grid-intro> div {
+
+.grid-intro img {
+    border-radius: 5px;
+}
+
+.grid-intro > div {
     margin: 20px 20px;
-    width: 150px;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 5px 7px rgba(0, 0, 0, 0.4);
+    border-radius: 20px;
+}
+
+.grid-intro > div:hover {
+    box-shadow: 0 5px 7px rgba(0, 0, 0, 0.4);
+    transform: translateY(-5px);
+    transition: 250ms;
+}
+
+.grid-intro > div:not(:hover) {
+    transform: translateY(5px);
+    transition: 250ms;
+}
+
+.grid-intro a {
+    color: white;
+    text-decoration: none;
 }
 
 .title-shop-introduce-container1{
@@ -80,7 +140,7 @@ body{
 
 
 .item-main-show-container > div {
-    background-color: rgb(73, 73, 73);
+    background-color: rgb(97, 123, 172);
     font-size: 30px;
     text-align: center;
     margin: 20px;
@@ -98,6 +158,75 @@ body{
 }
 
 .title-item{
-    margin: 0 !important;
+    margin: 0 ;
     padding: 0;
 }
+
+.navbar-center {
+    display: flex;
+    align-items: center;
+}
+.navbar-center i {
+    font-size: 24px;
+    margin: 10px;
+
+    color: black;
+}
+
+.navbar-center > input {
+    border-radius: 10px;
+    padding: 4px 20px;
+    margin: 3px;
+    width: 200px;
+    height: 40px;
+    color: white;
+    background-color: blanchedalmond;
+    border: none;
+    border: 1px solid lightgray
+}
+
+.navbar-center > button {
+    border-radius: 30px;
+}
+
+
+
+.item-main-show-container > div {
+    border-radius: 10px;
+    display: block;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+.item-main-show-container > div:hover {
+    box-shadow: 0 5px 7px rgba(0, 0, 0, 0.4);
+    transform: translateY(-5px);
+    transition: 250ms;
+    cursor: pointer;
+}
+.item-main-show-container > div:active {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transform: translateY(1px);
+}
+.icon-wrapper {
+    margin: 10px;
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border-radius: 50%; /* Tùy chỉnh góc bo tròn */
+}
+
+.follow-btn {
+    margin-right: 8px;
+    background-color: #f44336; /* Màu đỏ */
+    color: white;              /* Chữ trắng */
+    border: none;              /* Không viền */
+    padding: 8px 12px;        /* Đệm bên trong */
+    font-size: 16px;           
+    border-radius: 5px;      
+    cursor: pointer;           /* Đổi con trỏ chuột */
+    transition: background-color 0.3s; /* Hiệu ứng hover mượt */
+}
+
+.follow-btn:hover {
+    background-color: #4029c2; /* Đổi màu khi hover */
+}
+
